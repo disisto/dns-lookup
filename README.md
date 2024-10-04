@@ -4,7 +4,7 @@
 
 # DNS Lookup 
 
-DNS Lookup from troubleshooting.tools allows you to query different DNS records for a specific domain. You can retrieve details of different DNS record types such as A, AAAA, CNAME, MX, NS, TXT, SRV, PTR, SOA and more via a Public DNS server of your choice.
+DNS Lookup by troubleshooting.tools allows you to query different DNS records for a specific domain. You can retrieve details of different DNS record types such as A, AAAA, CNAME, MX, NS, TXT, SRV, PTR, SOA and more via a Public DNS server of your choice.
 
 ## Content
 <ol>
