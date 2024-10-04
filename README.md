@@ -105,21 +105,22 @@ The DNS Lookup API allows you to query various DNS records for a given domain. Y
 
 #### 1. Query by Domain
 
-**Endpoint:**
+##### Endpoint:
 
 ``` BASH
 curl -X GET https://api.troubleshooting.tools/lookup/dns/{domain}/ 
 ```
 
-**Example Request:**
+##### Example Request:
 
 ``` BASH
 curl -X GET https://api.troubleshooting.tools/lookup/dns/example.com/ 
 ```
 
-Note: If no special record type is specified, the following record types are queried: ```A```, ```AAAA```, ```CNAME```, ```MX```, ```NS```, ```TXT```, ```SRV```, ```PTR```, ```SOA```.
+##### Note:
+* If no special record type is specified, the following record types are queried: ```A```, ```AAAA```, ```CNAME```, ```MX```, ```NS```, ```TXT```, ```SRV```, ```PTR```, ```SOA```.
 
-**Example Response:**
+##### Example Response:
 ``` JSON
 {
   "domain": "example.de",
@@ -156,19 +157,19 @@ Note: If no special record type is specified, the following record types are que
 
 #### 2. Query by Domain and Record Type
 
-**Endpoint:**
+##### Endpoint:
 
 ``` BASH
 curl -X GET https://api.troubleshooting.tools/lookup/dns/{domain}/{record_type}/
 ```
 
-**Example Request:**
+##### Example Request:
 
 ``` BASH
 curl -X GET https://api.troubleshooting.tools/lookup/dns/example.de/A/
 ```
 
-**Example Response:**
+##### Example Response:
 
 ``` JSON
 {
@@ -184,19 +185,21 @@ curl -X GET https://api.troubleshooting.tools/lookup/dns/example.de/A/
 
 #### 3. Query by Domain and DNS Server
 
+##### Endpoint:
+
 ``` BASH
 curl -X GET https://api.troubleshooting.tools/lookup/dns/{domain}/{dns_server}/
 ```
 
-**Example Request:**
+##### Example Request:
 
 ``` BASH
 curl -X GET https://api.troubleshooting.tools/lookup/dns/example.de/1.1.1.1/
 ```
+##### Note:
+* If no special record type is specified, the following record types are queried: ```A```, ```AAAA```, ```CNAME```, ```MX```, ```NS```, ```TXT```, ```SRV```, ```PTR```, ```SOA```.
 
-Note: If no special record type is specified, the following record types are queried: ```A```, ```AAAA```, ```CNAME```, ```MX```, ```NS```, ```TXT```, ```SRV```, ```PTR```, ```SOA```.
-
-**Example Response:**
+##### Example Response:
 
 ``` JSON
 {
@@ -234,17 +237,19 @@ Note: If no special record type is specified, the following record types are que
 
 #### 4. Query by Domain, Record Type, and DNS Server
 
+##### Endpoint:
+
 ``` BASH
 curl -X GET https://api.troubleshooting.tools/lookup/dns/{domain}/{record_type}/{dns_server}/
 ```
 
-**Example Request:**
+##### Example Request:
 
 ``` BASH
 curl -X GET https://api.troubleshooting.tools/lookup/dns/example.de/A/1.1.1.1/
 ```
 
-**Example Response:**
+##### Example Response:
 
 ``` JSON
 {
