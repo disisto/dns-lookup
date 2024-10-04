@@ -123,33 +123,31 @@ curl -X GET https://api.troubleshooting.tools/lookup/dns/example.com/
 ##### Example Response:
 ``` JSON
 {
-  "domain": "example.de",
+  "domain": "example.com",
   "dns_server": "localhost",
   "results": {
     "A": [
-      "217.160.0.248"
+      "93.184.215.14"
     ],
     "AAAA": [
-      "2001:8d8:100f:f000::26f"
+      "2606:2800:21f:cb07:6820:80da:af6b:8b2c"
     ],
     "CNAME": "No records found for type CNAME.",
     "MX": [
-      "10 mx01.ionos.de.",
-      "10 mx00.ionos.de."
+      "0 ."
     ],
     "NS": [
-      "ns1078.ui-dns.biz.",
-      "ns1078.ui-dns.com.",
-      "ns1078.ui-dns.de.",
-      "ns1078.ui-dns.org."
+      "a.iana-servers.net.",
+      "b.iana-servers.net."
     ],
     "TXT": [
-      "\"v=spf1 include:_spf-eu.ionos.com ~all\""
+      "\"v=spf1 -all\"",
+      "\"wgyf8z8cgvm2qmxpnbnldrcltvk4xqfn\""
     ],
     "SRV": "No records found for type SRV.",
     "PTR": "No records found for type PTR.",
     "SOA": [
-      "ns1078.ui-dns.com. hostmaster.1und1.de. 2016041908 28800 7200 604800 300"
+      "ns.icann.org. noc.dns.icann.org. 2024081432 7200 3600 1209600 3600"
     ]
   }
 }
@@ -166,18 +164,18 @@ https://api.troubleshooting.tools/lookup/dns/{domain}/{record_type}/
 ##### Example Request:
 
 ``` BASH
-curl -X GET https://api.troubleshooting.tools/lookup/dns/example.de/A/
+curl -X GET https://api.troubleshooting.tools/lookup/dns/example.com/A/
 ```
 
 ##### Example Response:
 
 ``` JSON
 {
-  "domain": "example.de",
+  "domain": "example.com",
   "dns_server": "localhost",
   "results": {
     "A": [
-      "217.160.0.248"
+      "93.184.215.14"
     ]
   }
 }
@@ -194,7 +192,7 @@ https://api.troubleshooting.tools/lookup/dns/{domain}/{dns_server}/
 ##### Example Request:
 
 ``` BASH
-curl -X GET https://api.troubleshooting.tools/lookup/dns/example.de/1.1.1.1/
+curl -X GET https://api.troubleshooting.tools/lookup/dns/example.com/1.1.1.1/
 ```
 ##### Note:
 * If no special record type is specified, the following record types are queried: ```A```, ```AAAA```, ```CNAME```, ```MX```, ```NS```, ```TXT```, ```SRV```, ```PTR```, ```SOA```.
@@ -203,33 +201,31 @@ curl -X GET https://api.troubleshooting.tools/lookup/dns/example.de/1.1.1.1/
 
 ``` JSON
 {
-  "domain": "example.de",
+  "domain": "example.com",
   "dns_server": "1.1.1.1",
   "results": {
     "A": [
-      "217.160.0.248"
+      "93.184.215.14"
     ],
     "AAAA": [
-      "2001:8d8:100f:f000::26f"
+      "2606:2800:21f:cb07:6820:80da:af6b:8b2c"
     ],
     "CNAME": "No records found for type CNAME.",
     "MX": [
-      "10 mx00.ionos.de.",
-      "10 mx01.ionos.de."
+      "0 ."
     ],
     "NS": [
-      "ns1078.ui-dns.biz.",
-      "ns1078.ui-dns.org.",
-      "ns1078.ui-dns.de.",
-      "ns1078.ui-dns.com."
+      "a.iana-servers.net.",
+      "b.iana-servers.net."
     ],
     "TXT": [
-      "\"v=spf1 include:_spf-eu.ionos.com ~all\""
+      "\"v=spf1 -all\"",
+      "\"wgyf8z8cgvm2qmxpnbnldrcltvk4xqfn\""
     ],
     "SRV": "No records found for type SRV.",
     "PTR": "No records found for type PTR.",
     "SOA": [
-      "ns1078.ui-dns.com. hostmaster.1und1.de. 2016041908 28800 7200 604800 300"
+      "ns.icann.org. noc.dns.icann.org. 2024081432 7200 3600 1209600 3600"
     ]
   }
 }
@@ -246,18 +242,18 @@ https://api.troubleshooting.tools/lookup/dns/{domain}/{record_type}/{dns_server}
 ##### Example Request:
 
 ``` BASH
-curl -X GET https://api.troubleshooting.tools/lookup/dns/example.de/A/1.1.1.1/
+curl -X GET https://api.troubleshooting.tools/lookup/dns/example.com/A/1.1.1.1/
 ```
 
 ##### Example Response:
 
 ``` JSON
 {
-  "domain": "example.de",
+  "domain": "example.com",
   "dns_server": "1.1.1.1",
   "results": {
     "A": [
-      "217.160.0.248"
+      "93.184.215.14"
     ]
   }
 }
