@@ -108,7 +108,7 @@ The DNS Lookup API allows you to query various DNS records for a given domain. Y
 ##### Endpoint:
 
 ``` BASH
-curl -X GET https://api.troubleshooting.tools/lookup/dns/{domain}/ 
+https://api.troubleshooting.tools/lookup/dns/{domain}/ 
 ```
 
 ##### Example Request:
@@ -160,7 +160,7 @@ curl -X GET https://api.troubleshooting.tools/lookup/dns/example.com/
 ##### Endpoint:
 
 ``` BASH
-curl -X GET https://api.troubleshooting.tools/lookup/dns/{domain}/{record_type}/
+https://api.troubleshooting.tools/lookup/dns/{domain}/{record_type}/
 ```
 
 ##### Example Request:
@@ -188,7 +188,7 @@ curl -X GET https://api.troubleshooting.tools/lookup/dns/example.de/A/
 ##### Endpoint:
 
 ``` BASH
-curl -X GET https://api.troubleshooting.tools/lookup/dns/{domain}/{dns_server}/
+https://api.troubleshooting.tools/lookup/dns/{domain}/{dns_server}/
 ```
 
 ##### Example Request:
@@ -240,7 +240,7 @@ curl -X GET https://api.troubleshooting.tools/lookup/dns/example.de/1.1.1.1/
 ##### Endpoint:
 
 ``` BASH
-curl -X GET https://api.troubleshooting.tools/lookup/dns/{domain}/{record_type}/{dns_server}/
+https://api.troubleshooting.tools/lookup/dns/{domain}/{record_type}/{dns_server}/
 ```
 
 ##### Example Request:
