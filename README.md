@@ -37,21 +37,21 @@ DNS Lookup by troubleshooting.tools allows you to query different DNS records fo
 
 Beside the classic form input on the web page, the web page supports also webhooks. This possibility is ideal to share a link and guide the recipient directly to the results.
 
-1. Query by Domain
+1. Query by Domain<br>
 **URL:** **`https://troubleshooting.tools/lookup/dns/`** `{domain}/` <br><br>
 Example: `https://troubleshooting.tools/lookup/dns/example.com/`
 
-2. Query by Domain and Record Type
+2. Query by Domain and Record Type<br>
 **URL:** **`https://troubleshooting.tools/lookup/dns/`** `{domain}/{record_type}/` <br><br>
 Example: `https://troubleshooting.tools/lookup/dns/example.com/A/`
 
 
-3. Query by Domain and DNS Server
+3. Query by Domain and DNS Server<br>
 **URL:** **`https://troubleshooting.tools/lookup/dns/`** `{domain}/{dns_server}/` <br><br>
 Example: `https://troubleshooting.tools/lookup/dns/example.com/1.1.1.1/`
 
 
-4. Query by Domain, Record Type, and DNS Server
+4. Query by Domain, Record Type, and DNS Server<br>
 **URL:** **`https://troubleshooting.tools/lookup/dns/`** `{domain}/{record_type}/{dns_server}/` <br><br>
 Example: `https://troubleshooting.tools/lookup/dns/example.com/A/1.1.1.1/`
 
