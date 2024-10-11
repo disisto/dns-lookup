@@ -8,23 +8,52 @@ DNS Lookup by troubleshooting.tools allows you to query different DNS records fo
 
 ## Content
 <ol>
-<li>) <del>Web page</del></li>
-<li>) <del>Webhook</del></li>
+<li>) Web page</li>
+<li>) Webhook</li>
 <li>) <del>Open Graph</del></li>
 <li>) <del>OpenSearch</del></li>
-<li>) <del>HTML search form</del></li>
+<li>) HTML search form</li>
 <li>) API</li>
 </ol>
 
 
 ## 1.) Web page
 
-coming soon
+<ol>
+  <li>Open a web browser and visit: <a href="https://troubleshooting.tools/lookup/dns/">https://troubleshooting.tools/lookup/dns/</a></li>
+  <li>Enter the domain name into the search field.</li>
+  <li>Press "Enter" or click the "Submit" button.</li>
+</ol>
+
+<h3>Optional:</h3>
+<ol>
+  <li>Choose a predefined DNS server to run the query from.</li>
+  <li>Alternatively, select 'Custom DNS' and enter a public DNS server of your choice.</li>
+  <li>Select the desired record type for the results.</li>
+</ol>
 
 
 ## 2.) Webhook
 
-coming soon
+Beside the classic form input on the web page, the web page supports also webhooks. This possibility is ideal to share a link and guide the recipient directly to the results.
+
+1. Query by Domain
+**URL:** **`https://troubleshooting.tools/lookup/dns/`** `{domain}/` <br><br>
+Example: `https://troubleshooting.tools/lookup/dns/example.com/`
+
+2. Query by Domain and Record Type
+**URL:** **`https://troubleshooting.tools/lookup/dns/`** `{domain}/{record_type}/` <br><br>
+Example: `https://troubleshooting.tools/lookup/dns/example.com/A/`
+
+
+3. Query by Domain and DNS Server
+**URL:** **`https://troubleshooting.tools/lookup/dns/`** `{domain}/{dns_server}/` <br><br>
+Example: `https://troubleshooting.tools/lookup/dns/example.com/1.1.1.1/`
+
+
+4. Query by Domain, Record Type, and DNS Server
+**URL:** **`https://troubleshooting.tools/lookup/dns/`** `{domain}/{record_type}/{dns_server}/` <br><br>
+Example: `https://troubleshooting.tools/lookup/dns/example.com/A/1.1.1.1/`
 
 ## 3.) Open Graph
 
@@ -36,7 +65,54 @@ coming soon
 
 ## 5.) HTML search form
 
-coming soon
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Lookup Form</title>
+  </head>
+  <body>
+    <h3>DNS Lookup Form</h3>
+    <form id="dnsLookupForm" action="#" method="GET" onsubmit="performLookup(event)">
+        <label for="domain">Domain Name:</label>
+        <input type="text" id="domain" name="domain" required placeholder="example.com"><br><br>
+
+        <label for="recordType">Record Type (optional):</label>
+        <input type="text" id="recordType" name="recordType" placeholder="A, MX, etc."><br><br>
+
+        <label for="dnsServer">DNS Server (optional):</label>
+        <input type="text" id="dnsServer" name="dnsServer" placeholder="1.1.1.1, 8.8.8.8"><br><br>
+
+        <input type="submit" value="Lookup">
+    </form>
+
+    <script>
+        function performLookup(event) {
+            event.preventDefault();
+
+            const domain = document.getElementById('domain').value;
+            const recordType = document.getElementById('recordType').value;
+            const dnsServer = document.getElementById('dnsServer').value;
+
+            let url = `https://troubleshooting.tools/lookup/dns/${domain}/`;
+
+            if (recordType) {
+                url += `${recordType}/`;
+            }
+
+            if (dnsServer) {
+                url += `${dnsServer}/`;
+            }
+
+            // Redirect to the generated URL
+            window.location.href = url;
+        }
+    </script>
+  </body>
+</html>
+```
 
 ## 6.) API
 
